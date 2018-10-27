@@ -1,0 +1,27 @@
+{
+  "name": "superservice",
+  "version": "1.0.0",
+  "description": "SuperService is a new tool for customer representatives to improve customer experience",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KannaDev/superservice.git"
+  },
+  "keywords": [
+    "T-Mobile",
+    "Service"
+  ],
+  "author": "Anirudh Emmadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KannaDev/superservice/issues"
+  },
+  "homepage": "https://github.com/KannaDev/superservice#readme",
+  "devDependencies": {
+    "electron": "^3.0.6"
+  }
+}
