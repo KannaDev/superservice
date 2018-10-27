@@ -15,7 +15,7 @@
     "T-Mobile",
     "Service"
   ],
-  "author": "Anirudh Emmadi",
+  "author": ["Anirudh Kantareddy", "Anirudh Emmadi"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/KannaDev/superservice/issues"
