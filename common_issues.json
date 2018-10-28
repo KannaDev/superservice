@@ -1,0 +1,103 @@
+[
+    {
+        "keywords": ["signal", "issues"],
+        "answer": "Restart the device. Restart your device regularly to reconnect to the network, especially after traveling",
+        "link": "https://support.t-mobile.com/docs/DOC-4211"
+    },
+    {
+        "keywords": ["location", "service", "coverage", "poor"],
+        "answer": "Visit https://howmobileworks.com , and sign our petition to tell local planners and decision makers that you support our network enhancements.",
+        "link": "https://howmobileworks.com"
+    },
+    {
+        "keywords": ["call", "drop", "issues"],
+        "answer": "Check your phone shows at least 2 signal bars. If you have less, your signal is too low for reliable calls. Check out Signal issues / no service troubleshooting.",
+        "link": "https://support.t-mobile.com/docs/DOC-4120"
+    },
+    {
+        "keywords": ["wi-fi", "call"],
+        "answer": "Please for wait 24 hours. It takes time for your phone to be fully registered on the network and to your account. If you are still having problems 24 hours later, please contact T-Mobile support",
+        "link": "https://www.androidcentral.com/common-t-mobile-problems-and-how-fix-them"
+    },
+    {
+        "keywords": ["video", "bad", "high-resolution"],
+        "answer": "You need to shut down Binge On. You can disable Binge On by dialing #263# on your phone.",
+        "link": "https://www.androidcentral.com/common-t-mobile-problems-and-how-fix-them"
+    },
+    {
+        "keywords": ["message", "over", "on", "digits"],
+        "answer": "If you're trying to send messages with your Digits number through the app and they won't go through, try turning VoLTE (Voice over LTE) off. You will find this in your phone's network settings and it could be marked as HD Voice.",
+        "link": "https://www.androidcentral.com/common-t-mobile-problems-and-how-fix-them"
+    },
+    {
+        "keywords": ["galaxy", "watch", "lte", "duplicate", "message"],
+        "answer": "T-Mobile is aware of this issue and working effciently to get this resolved. Please check on our social media regularly to see if this issue is fixed",
+        "link": "https://support.t-mobile.com/thread/147874"
+    },
+    {
+        "keywords": ["bada", "data", "speeds"],
+        "answer": "It looks like a case of congestion. We apologize at the moment and working effciently on a short-term and long-term fix for this.",
+        "link": "https://support.t-mobile.com/thread/148347#663391"
+    },
+    {
+        "keywords": ["4G", "LTE", "cellspot"],
+        "answer": "Make sure you follow the proper steps to setup the 4G LTE Cellspot and ensure at least 2 hours has passed since setup, to ensure proper functionality",
+        "link": "https://support.t-mobile.com/docs/DOC-12601"
+    },
+    {
+        "keywords": ["roaming", "device", "registered", "network"],
+        "answer": "Try to turn on airplane mode, as it is a common solution for resetting your network connection",
+        "link": "https://support.t-mobile.com/thread/145622"
+    },
+    {
+        "keywords": ["mms", "message", "ios", "twelve"],
+        "answer": "There is a size and resolution limit for users under iOS 12. Try using a third party messanging app or emailing the reciever",
+        "link": "https://support.t-mobile.com/thread/148184 "
+    },
+    {
+        "keywords": ["photos", "phone", "to", "email"],
+        "answer": "If the phone has internet connectivity (either through WiFi or your data signal) you can backup your photos to Google and view them on a computer. Open your Google Photos app. When you have the app open, you will select the 3 lines on the upper left to open the menu, then select Settings, then Back up and Sync.",
+        "link": "https://support.t-mobile.com/thread/147926"
+    },
+    {
+        "keywords": ["more", "increase", "memory", "phone"],
+        "answer": "The internal memory is part of the physical hardware. Unlike a computer,  you cannot open it up and put a larger storage device inside it. The only way to expand storage is via a SD card.",
+        "link": 
+    },
+    {
+        "keywords": ["site", "down", "trouble", "running"],
+        "answer": "The T-Mobile Support Team is working hard to resolve the issue diligiently. Please keep checking frequently if the website is up and running soon",
+        "link": "https://support.t-mobile.com/thread/147590"
+    },
+    {
+        "keywords": ["no", "internet", "data", "roaming"],
+        "answer": "Check the signal indicators at the top of the screen: It must show two signal bars or more. If fewer, your signal is too low for reliable data speeds. It must also show a data service icon (3G, 4G, or LTE). If no internet while roaming, Check if a network short code needs to be used. Dial #RON# (#766), then Send to enable data roaming on the network.",
+        "link": "https://support.t-mobile.com/docs/DOC-2565"
+    },
+    {
+        "keywords": ["find", "account", "information"],
+        "answer": "To find all of your account information, you may try using the T-Mobile app to find what you're looking for.",
+        "link": "https://support.t-mobile.com/thread/147658"
+    },
+    {
+        "keywords": ["digits", "line", "high", "speed", "data"],
+        "answer": "You may need to change to the hig speed version plan if you would want to get faster 4G LTE speeds for video streaming on the Digits device",
+        "link": "https://support.t-mobile.com/thread/148435"
+    },
+    {
+        "keywords": ,
+        "answer": ,
+        "link": 
+    },
+    {
+        "keywords": ,
+        "answer": ,
+        "link": 
+    },
+    {
+        "keywords": ,
+        "answer": ,
+        "link": 
+    },
+
+]
