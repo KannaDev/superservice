@@ -10,23 +10,23 @@ const tone_analyzer = new ToneAnalyzerV3({
 
 
 var utterances = [
-    {
-      text: "Hello, I'm having a problem with your product.",
-      user: "customer"
-    },
-    {
-      text: "OK, let me know what's going on, please.",
-      user: "agent"
-    },
-    {
-      text: "Well, nothing is working :(",
-      user: "customer"
-    },
-    {
-      text: "Sorry to hear that.",
-      user: "agent"
-    }
-  ]
+  {
+    text: "Hello, I'm having a problem with your product.",
+    user: "customer"
+  },
+  {
+    text: "OK, let me know what's going on, please.",
+    user: "agent"
+  },
+  {
+    text: "Well, nothing is working :(",
+    user: "customer"
+  },
+  {
+    text: "Sorry to hear that.",
+    user: "agent"
+  }
+]
 
 
 var toneChatParams = {

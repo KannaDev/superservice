@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart customer representative dashboard">
+  <meta name="author" content="Anirudh Emmadi">
+  <meta name="keyword" content="T-Mobile, customer service, dashboard, modern">
+  <title>SuperService - SuperHuman Customer Service</title>
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/zabuto_calendar.css">
+  <link rel="stylesheet" type="text/css" href="lib/gritter/css/jquery.gritter.css" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+  <script src="lib/chart-master/Chart.js"></script>
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="index.html" class="logo"><b>Super<span>Service</span></b></a>
+      <!--logo end-->
+      <div class="nav notify-row" id="top_menu">
+        <!--  notification start -->
+        <ul class="nav top-menu">
+          <!-- settings start -->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-tasks"></i>
+              <span class="badge bg-theme">4</span>
+            </a>
+            <ul class="dropdown-menu extended tasks-bar">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">Previous Customer Satisfaction</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Jonathon Smith</div>
+                    <div class="percent">71%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="71" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 71%">
+                      <span class="sr-only">71%</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Nick Freeman</div>
+                    <div class="percent">64%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="64" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 64%">
+                      <span class="sr-only">64%</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Max Steele</div>
+                    <div class="percent">89%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="89" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 89%">
+                      <span class="sr-only">89%</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Vishal Patel</div>
+                    <div class="percent">48%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="48" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 48%">
+                      <span class="sr-only">48%</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="external">
+                <a href="#">View all customers</a>
+              </li>
+            </ul>
+          </li>
+          <!-- settings end -->
+          <!-- inbox dropdown start-->
+          <li id="header_inbox_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-envelope-o"></i>
+              <span class="badge bg-theme">2</span>
+            </a>
+            <ul class="dropdown-menu extended inbox">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">You have 2 new messages</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-zac.jpg"></span>
+                  <span class="subject">
+                    <span class="from">Zac Snider</span>
+                    <span class="time">Just now</span>
+                  </span>
+                  <span class="message">
+                    Transcript received, click to view
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-divya.jpg"></span>
+                  <span class="subject">
+                    <span class="from">Divya Manian</span>
+                    <span class="time">10 mins ago</span>
+                  </span>
+                  <span class="message">
+                    Hey, quick question: How do you...
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">View all messages</a>
+              </li>
+            </ul>
+          </li>
+          <!-- inbox dropdown end -->
+          <!-- notification dropdown start-->
+          <li id="header_notification_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-bell-o"></i>
+              <span class="badge bg-warning">7</span>
+            </a>
+            <ul class="dropdown-menu extended notification">
+              <div class="notify-arrow notify-arrow-yellow"></div>
+              <li>
+                <p class="yellow">You have 7 new notifications</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Server Overloaded.
+                  <span class="small italic">4 mins.</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                  Memory #2 Not Responding.
+                  <span class="small italic">30 mins.</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Disk Space Reached 85%.
+                  <span class="small italic">2 hrs.</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-success"><i class="fa fa-plus"></i></span>
+                  New User Registered.
+                  <span class="small italic">3 hrs.</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">See all notifications</a>
+              </li>
+            </ul>
+          </li>
+          <!-- notification dropdown end -->
+        </ul>
+        <!--  notification end -->
+      </div>
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="login.html">Logout</a></li>
+          <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+            Demo Call
+          </button>
+        </ul>
+      </div>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered">John Doe</h5>
+          <li class="mt">
+            <a href="index.html">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="blank.html">
+              <i class="fa fa-desktop"></i>
+              <span>Service</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a class="active" href="panels.html">
+              <i class="fa fa-cogs"></i>
+              <span>Tools</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="https://support.t-mobile.com/welcome">
+              <i class="fa fa-book"></i>
+              <span>Knowledgebase</span>
+            </a>
+          <li class="sub-menu">
+            <a href="chat_room.html">
+              <i class="fa fa-comments-o"></i>
+              <span>ExpertChat</span>
+            </a>
+          </li>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-tasks"></i>
+              <span>Customer Satisfaction</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class=" fa fa-bar-chart-o"></i>
+              <span>Overall Stats</span>
+            </a>
+          </li>
+          <li>
+            <a href="inbox.html">
+              <i class="fa fa-envelope"></i>
+              <span>Mail</span>
+              <span class="label label-theme pull-right mail-info">2</span>
+            </a>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+
+    <!-- /MAIN CONTENT -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <h3><i class="fa fa-angle-right"></i> Daily Dose of Twitter</h3>
+        <div class="row mt">
+          <div class="col-lg-12">
+            <!-- CHART PANELS -->
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>TMobile! Iíve had them for the past five years and they are great! No smoking mirror tactics like
+                    with
+                    Verizon Plus every interaction Iíve had with them has been a five star experience! Hope this helps!
+                    #Verizon #tmobile</p>
+                  <p class="user">83.76</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>.@JohnLegere @TMobileHelp #Tmobile I was told I qualified for military discount as an Army
+                    civilian.
+                    But thereís no option for that on your verification page. I called twice & was told I was fine but
+                    got
+                    texts saying Iíll be switched to a higher plan because of no proof. #Fail</p>
+                  <p class="user">46.82</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>#hurricanemichael2018#PanamaCity#850Strong @sprintcare post #HurricaneMichael day 18 service is
+                    still
+                    a joke. Thanks to #TMobile hotspot I can send this.</p>
+                  <p class="user">65.89</p>
+                </div>
+              </div>
+
+              <!-- /col-md-4 -->
+            </div>
+            <!-- /row - FIRST ROW OF PANELS -->
+            <!--  SECOND ROW OF PANELS -->
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>I have been with u for over a year now..i have been nothing but loyal to u and now you are asking
+                    for
+                    a $2,000 down for the LG thin q phone #TMobile</p>
+                  <p class="user">53.42</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>#hr4hr everyone retweet this so people in need after a horrible hurricane can get the help they
+                    need
+                    from #TMobile!</p>
+                  <p class="user">74.02</p>
+                </div>
+              </div>
+              <!--  /col-md-4 -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Why did I get the amber alert at 9:39pm pacific time? I seen this alert on the news 10 hours ago.
+                    How
+                    will a late alert help? #Tmobile @JohnLegere</p>
+                  <p class="user">43.29</p>
+                </div>
+              </div>
+
+              <!-- /col-md-4 -->
+            </div>
+            <!-- /row - SECOND ROW OF PANELS -->
+            <!--  THIRD ROW OF PANELS -->
+            <div class="row">
+              <!-- WEATHER PANEL -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>@JohnLegere #tmobile disappointed in tmoble for rhe bait and switch on the promotion they ran in
+                    August $120 for 4 lines, now they are not honoring it.</p>
+                  <p class="user">23.08</p>
+                </div>
+              </div>
+              <!-- /col-md-4-->
+              <!-- WEATHER-2 PANEL -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>So proud to be a part of the @TMobile fam!!! Join me in tweeting using the #HR4HR every tweet
+                    using
+                    that hashtag will generate $2. Towards hurricane relief
+                    #HR4HR #Tmobile</p>
+                  <p class="user">86.28</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <!-- WEATHER-3 PANEL -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Being able to give back to my very own community in a time of devastation is why I love my job so
+                    much! #TheCarrierThatCares #HR4HR #AreYouWithUs #Tmobile #HurricaneMichael2018 #PanamaCity</p>
+                  <p class="user">78.19</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+            </div>
+            <!-- /row - THIRD ROW OF PANELS -->
+            <!--  FOURTH ROW OF PANELS -->
+            <div class="row">
+              <!-- TWITTER PANEL -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Yes, I would love to come back to TMobile. A phone would be nice. #nopressure #tmobile</p>
+                  <p class="user">65.92</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Diversity and inclusion is what makes T-Mobile special! We are in this together and our
+                    differences is
+                    what builds us up! #insightout #TMobile #AreYouWithUS</p>
+                  <p class="user">89.72</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>We had some #seriousfun talking #TMobile with these amazing teens at the Annapolis
+                    #boysandgirlsclub
+                    #GenerationT #NERULES #TruckLife #MyUncarrierLife #beepbeep #TmobileTruck #weareinittogether
+                    #BeMagenta #AreYouWithUs #CustomerObsessed</p>
+                  <p class="user">81.02</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+            </div>
+            <!-- /row FOURTH ROW OF PANELS -->
+            <!--  FIFTH ROW OF PANELS -->
+            <div class="row">
+              <!--  TODO PANEL -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Loving my free hour of WiFi on delta!Thanks @JohnLegere for the assist!!#TMobile #tmobilewingman</p>
+                  <p class="user">76.92</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <!--  PROFILE 01 PANEL -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>In order to roam on US Cellular with #Tmobile do you have to buy a branded phone or would an
+                    unlocked
+                    phone work? @TMobileHelp</p>
+                  <p class="user">51.02</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <!--  PROFILE 02 PANEL -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>@JohnLegere you look #beautiful today mísir #hacktober #tmotech #TMobile #johnlegere</p>
+                  <p class="user">65.02</p>
+                </div>
+              </div>
+              <!--/ col-md-4 -->
+            </div>
+            <!-- /row FIFTH ROW OF PANELS -->
+            <!--  SIXTH ROW OF PANELS -->
+            <!-- Product Panel -->
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Tweet #hr4hr and retweet it often to contribute to the good work of #tmobile as they assist the
+                    disaster relief efforts #repost #?? #worldseries #Dodgers #GoDodgers #Blessings #GodBless</p>
+                  <p class="user">84.98</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              <!--  Spotify Panel -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>Hey @ATT your #Uverse service is horrible. 1.5mbps for download? WTF? @TMobile keep kicking @$$!
+                    37.8mbps for download and with only 2 bars. I don't know why I even bother giving my money away to
+                    @ATT
+                    #TMobile #Internet #battleofthecarriers #clearwinner</p>
+                  <p class="user">76.03</p>
+                </div>
+              </div>
+              <!-- /col-md-4-->
+              <!--  Blog Panel -->
+              <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                <div class="twitter-panel pn">
+                  <i class="fa fa-twitter fa-4x"></i>
+                  <p>@m_wan4life Today is my 10 year anniversary with TMO. Thank you for the opportunity you gave me to
+                    have the best decade of my career. ?????? #Tmobile</p>
+                  <p class="user">82.95</p>
+                </div>
+              </div>
+              <!-- /col-md-4-->
+            </div>
+            <!--  END SIXTH ROW OF PANELS -->
+          </div>
+        </div>
+      </section>
+      <!-- /wrapper -->
+    </section>
+    <!--main content end-->
+    <!-- **********************************************************************************************************************************************************
+                      RIGHT SIDEBAR CONTENT
+                ********************************************************************************************************************************************************** -->
+    <div class="col-lg-3 ds">
+      <!-- USERS ONLINE SECTION -->
+      <h4 class="centered mt">REPRESENTATIVES ONLINE</h4>
+      <!-- First Member -->
+      <div class="desc">
+        <div class="thumb">
+          <img class="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align="">
+        </div>
+        <div class="details">
+          <p>
+            <a href="#">DIVYA MANIAN</a><br />
+            <muted>In Call</muted>
+          </p>
+        </div>
+      </div>
+      <!-- Second Member -->
+      <div class="desc">
+        <div class="thumb">
+          <img class="img-circle" src="img/ui-sherman.jpg" width="35px" height="35px" align="">
+        </div>
+        <div class="details">
+          <p>
+            <a href="#">DJ SHERMAN</a><br />
+            <muted>Available</muted>
+          </p>
+        </div>
+      </div>
+      <!-- Third Member -->
+      <div class="desc">
+        <div class="thumb">
+          <img class="img-circle" src="img/ui-danro.jpg" width="35px" height="35px" align="">
+        </div>
+        <div class="details">
+          <p>
+            <a href="#">DAN ROGERS</a><br />
+            <muted>On Break</muted>
+          </p>
+        </div>
+      </div>
+      <!-- Fourth Member -->
+      <div class="desc">
+        <div class="thumb">
+          <img class="img-circle" src="img/ui-zac.jpg" width="35px" height="35px" align="">
+        </div>
+        <div class="details">
+          <p>
+            <a href="#">Zac Sniders</a><br />
+            <muted>In Call</muted>
+          </p>
+        </div>
+      </div>
+      <!-- CALENDAR-->
+      <div id="calendar" class="mb">
+        <div class="panel green-panel no-margin">
+          <div class="panel-body">
+            <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+              <div class="arrow"></div>
+              <h3 class="popover-title" style="disadding: none;"></h3>
+              <div id="date-popover-content" class="popover-content"></div>
+            </div>
+            <div id="my-calendar"></div>
+          </div>
+        </div>
+      </div>
+      <!-- / calendar -->
+    </div>
+    <!-- /col-lg-3 -->
+    </div>
+    <!-- /row -->
+  </section>
+  </section>
+  <!--main content end-->
+  <!--footer start-->
+  <footer class="site-footer">
+    <div class="text-center">
+      <p>
+        &copy; Super <strong>Service</strong>. 2018
+      </p>
+      <a href="index.html#" class="go-top">
+        <i class="fa fa-angle-up"></i>
+      </a>
+    </div>
+  </footer>
+  <!--footer end-->
+  </section>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="lib/jquery/jquery.min.js"></script>
+
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="lib/jquery.scrollTo.min.js"></script>
+  <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <script src="lib/jquery.sparkline.js"></script>
+  <!--common script for all pages-->
+  <script src="lib/common-scripts.js"></script>
+  <script type="text/javascript" src="lib/gritter/js/jquery.gritter.js"></script>
+  <script type="text/javascript" src="lib/gritter-conf.js"></script>
+  <!--script for this page-->
+  <script src="lib/sparkline-chart.js"></script>
+  <script src="lib/zabuto_calendar.js"></script>
+  <script type="application/javascript">
+    $(document).ready(function () {
+      $("#date-popover").popover({
+        html: true,
+        trigger: "manual"
+      });
+      $("#date-popover").hide();
+      $("#date-popover").click(function (e) {
+        $(this).hide();
+      });
+
+      $("#my-calendar").zabuto_calendar({
+        action: function () {
+          return myDateFunction(this.id, false);
+        },
+        action_nav: function () {
+          return myNavFunction(this.id);
+        },
+        ajax: {
+          url: "show_data.php?action=1",
+          modal: true
+        },
+        legend: [{
+          type: "text",
+          label: "Special event",
+          badge: "00"
+        },
+        {
+          type: "block",
+          label: "Regular event",
+        }
+        ]
+      });
+    });
+
+    function myNavFunction(id) {
+      $("#date-popover").hide();
+      var nav = $("#" + id).data("navigation");
+      var to = $("#" + id).data("to");
+      console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+    }
+  </script>
+  <script type="application/javascript">
+    input = document.getElementById("input-transcript");
+    var i = 0;
+    var txt = "Welcome, everyone, to the official debate section of the charter review. Unfortunately, the captain of the university debate team had a scheduling conflict. Yeah So, we had to bring someone else in to fill in for this event. Ladies and gentlemen, please welcome the co - host of ONN's Crossflre, famed political consultant,the Raging Cajun, Mr. James Oarville. Thank you. Thank you, Dean Pritchard. It's an honor and pleasure to be here, sir. Topic number one. What is your position on the role of government in supporting innovation in the field of biotechnology ? Well, Dean, I'm glad you asked that question... I'd like to jump in and take that one, Jimmy, if you don't mind. Have at it, hoff. Recent research has shown the empirical evidence for globalization of corporate innovation is very limited. And as a corollary, the market for technologies is shrinking. As a world leader, it is important for America to provide systematic research grants for our scientists. I believe strongly there will always be a need for us to have a well - articulated innovation policy with emphasis on human resource development. Thank you. That was interesting. Thank you very much. And your rebuttal, Mr.Harville ? We have no response. That was perfect. That's the way you do it! That's the way you debate.";
+    var speed = 56;
+    function typeWriter() {
+      if (i < txt.length) {
+        setTimeout(function () {
+          speed = Math.random() * 135 + 35;
+        }, 1025);
+        console.log(speed);
+        input.innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    function sentiment() {
+      let happy = document.getElementById("happy");
+      happy.innerHTML = '<div class="showback"> <h4> <i class="fa fa-angle-right"></i>Happiness</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100" style="width: 84%"><span class="sr-only">84%</span></div></div></div>'
+      let sad = document.getElementById("sad");
+      sad.innerHTML = '<div class="showback"><h4><i class="fa fa-angle-right"></i>Sadness</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%"><span class="sr-only">0%</span></div></div></div>'
+      let anger = document.getElementById("anger");
+      anger.innerHTML = '<div class="showback"> <h4> <i class="fa fa-angle-right"></i>Anger</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">10%</span></div></div></div>'
+      let confidence = document.getElementById("confidence");
+      confidence.innerHTML = '<div class="showback"><h4><i class="fa fa-angle-right"></i>Confidence</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100" style="width: 69%"><span class="sr-only">69%</span></div></div></div>'
+    }
+    function quick() {
+      let quick = document.getElementById("quick");
+      quick.innerHTML = "<strong>No Quick Solutions Detected</strong>";
+    }
+  </script>
+</body>
+
+</html>
