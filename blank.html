@@ -283,8 +283,14 @@
     <section id="main-content">
       <section class="wrapper site-min-height">
         <h3><i class="fa fa-angle-right"></i> Transcript</h3>
+        <audio controls>
+          <source src="Clip.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <br>
         <button onclick="typeWriter()">Click to record transcript</button>
         <button onclick="sentiment()">Click to generate sentiment analysis</button>
+        <button onclick="quick()">Click to generate quick answers</button>
         <br>
         <div class="row mt">
           <div class="col-lg-12">
@@ -300,6 +306,8 @@
         <div id="anger"></div>
         <br>
         <div id="confidence"></div>
+        <br>
+        <div id="quick"></div>
       </section>
       <!-- /wrapper -->
     </section>
@@ -474,6 +482,10 @@
       anger.innerHTML = '<div class="showback"> <h4> <i class="fa fa-angle-right"></i>Anger</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">10%</span></div></div></div>'
       let confidence = document.getElementById("confidence");
       confidence.innerHTML = '<div class="showback"><h4><i class="fa fa-angle-right"></i>Confidence</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100" style="width: 69%"><span class="sr-only">69%</span></div></div></div>'
+    }
+    function quick() {
+      let quick = document.getElementById("quick");
+      quick.innerHTML = "<strong>No Quick Solutions Detected</strong>";
     }
   </script>
 </body>
