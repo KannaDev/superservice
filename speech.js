@@ -8,14 +8,15 @@ var speechToText = new SpeechToTextV1({
 });
 
 var combinedStream = CombinedStream.create();
-combinedStream.append(fs.createReadStream('wav1.wav'));
+combinedStream.append(fs.createReadStream('wav2.wav'));
 
 
 var recognizeParams = {
   audio: combinedStream,
   'content_type': 'audio/wav',
+  speaker_labels: true,
   timestamps: false,
-  'word_alternatives_threshold': 0.9
+  'word_alternatives_threshold': 1
 
 
 };
@@ -24,6 +25,6 @@ speechToText.recognize(recognizeParams, function(error, speechRecognitionResults
   if (error) {
     console.log(error);
   } else {
-    console.log(JSON.stringify(speechRecognitionResults.results));
+    console.log(JSON.stringify(speechRecognitionResults, null, 2));
   }
 });
