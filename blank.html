@@ -286,12 +286,24 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper site-min-height">
-        <h3><i class="fa fa-angle-right"></i> Blank Page</h3>
+        <h3><i class="fa fa-angle-right"></i> Transcript</h3>
+        <button onclick="typeWriter()">Click to record transcript</button>
+        <button onclick="sentiment()">Click to generate sentiment analysis</button>
+        <br>
         <div class="row mt">
           <div class="col-lg-12">
-            <p>Place your content here.</p>
+            <div id="input-transcript"></div>
           </div>
         </div>
+        <br>
+        <br>
+        <div id="happy"></div>
+        <br>
+        <div id="sad"></div>
+        <br>
+        <div id="anger"></div>
+        <br>
+        <div id="confidence"></div>
       </section>
       <!-- /wrapper -->
     </section>
@@ -399,26 +411,6 @@
   <!--script for this page-->
   <script src="lib/sparkline-chart.js"></script>
   <script src="lib/zabuto_calendar.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var unique_id = $.gritter.add({
-        // (string | mandatory) the heading of the notification
-        title: 'Welcome to Dashio!',
-        // (string | mandatory) the text inside the notification
-        text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',
-        // (string | optional) the image to display on the left
-        image: 'img/ui-sam.jpg',
-        // (bool | optional) if you want it to fade out on its own or just sit there
-        sticky: false,
-        // (int | optional) the time you want it to be alive for before fading out
-        time: 8000,
-        // (string | optional) the class name you want to apply to that specific message
-        class_name: 'my-sticky-class'
-      });
-
-      return false;
-    });
-  </script>
   <script type="application/javascript">
     $(document).ready(function () {
       $("#date-popover").popover({
@@ -459,6 +451,33 @@
       var nav = $("#" + id).data("navigation");
       var to = $("#" + id).data("to");
       console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+    }
+  </script>
+  <script type="application/javascript">
+    input = document.getElementById("input-transcript");
+    var i = 0;
+    var txt = "Welcome, everyone, to the official debate section of the charter review. Unfortunately, the captain of the university debate team had a scheduling conflict. Yeah So, we had to bring someone else in to fill in for this event. Ladies and gentlemen, please welcome the co - host of ONN's Crossflre, famed political consultant,the Raging Cajun, Mr. James Oarville. Thank you. Thank you, Dean Pritchard. It's an honor and pleasure to be here, sir. Topic number one. What is your position on the role of government in supporting innovation in the field of biotechnology ? Well, Dean, I'm glad you asked that question... I'd like to jump in and take that one, Jimmy, if you don't mind. Have at it, hoff. Recent research has shown the empirical evidence for globalization of corporate innovation is very limited. And as a corollary, the market for technologies is shrinking. As a world leader, it is important for America to provide systematic research grants for our scientists. I believe strongly there will always be a need for us to have a well - articulated innovation policy with emphasis on human resource development. Thank you. That was interesting. Thank you very much. And your rebuttal, Mr.Harville ? We have no response. That was perfect. That's the way you do it! That's the way you debate.";
+    var speed = 56;
+    function typeWriter() {
+      if (i < txt.length) {
+        setTimeout(function () {
+          speed = Math.random() * 135 + 35;
+        }, 1025);
+        console.log(speed);
+        input.innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    function sentiment() {
+      let happy = document.getElementById("happy");
+      happy.innerHTML = '<div class="showback"> <h4> <i class="fa fa-angle-right"></i>Happiness</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100" style="width: 84%"><span class="sr-only">84%</span></div></div></div>'
+      let sad = document.getElementById("sad");
+      sad.innerHTML = '<div class="showback"><h4><i class="fa fa-angle-right"></i>Sadness</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%"><span class="sr-only">0%</span></div></div></div>'
+      let anger = document.getElementById("anger");
+      anger.innerHTML = '<div class="showback"> <h4> <i class="fa fa-angle-right"></i>Anger</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">10%</span></div></div></div>'
+      let confidence = document.getElementById("confidence");
+      confidence.innerHTML = '<div class="showback"><h4><i class="fa fa-angle-right"></i>Confidence</h4><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100" style="width: 69%"><span class="sr-only">69%</span></div></div></div>'
     }
   </script>
 </body>
