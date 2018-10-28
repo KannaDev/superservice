@@ -206,6 +206,9 @@
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
           <li><a class="logout" href="login.html">Logout</a></li>
+          <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+            Demo Call
+          </button>
         </ul>
       </div>
     </header>
@@ -463,9 +466,45 @@
           <!-- /row -->
         </div>
         <!-- /col-lg-9 END SECTION MIDDLE -->
+        <div class="showback">
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">INCOMING CALL</h4>
+                </div>
+                <div class="modal-body">
+                  <div style="display: flex; justify-content: center;">
+                    <img src="https://www.gravatar.com/avatar/1dd17880c87b938a7ee7fec691f188b5?size=200&d=https://phone.firertc.com/assets/avatar-256.png"
+                      alt="Caller ID Picture" height="120" width="120">
+                  </div>
+                  <div style="display: flex; justify-content: center;">
+                    <h2>Alan Tran</h2>
+                  </div>
+                  <h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Phone:
+                    </strong>(469)-361-7393
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <strong>Gender: </strong>Male <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Location:
+                    </strong>Seattle,
+                    WA &nbsp;&nbsp;&nbsp;&nbsp;
+                    <strong>Plan: </strong>T-Mobile ONE
+                  </h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Transfer Call</button>
+                  <a href="blank.html"><button type="button" class="btn btn-primary">Take Call</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- **********************************************************************************************************************************************************
               RIGHT SIDEBAR CONTENT
-              *********************************************************************************************************************************************************** -->
+        ********************************************************************************************************************************************************** -->
         <div class="col-lg-3 ds">
           <!-- USERS ONLINE SECTION -->
           <h4 class="centered mt">REPRESENTATIVES ONLINE</h4>
