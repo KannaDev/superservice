@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/KannaDev/superservice#readme",
   "dependencies": {
+    "superagent": "^4.0.0-beta.5",
     "watson-developer-cloud": "^3.12.0"
   }
 }
