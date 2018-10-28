@@ -1,24 +1,43 @@
-var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+require('dotenv').config();
+const readline = require('readline');
+const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 
-var toneAnalyzer = new ToneAnalyzerV3({
-  version_date: '2018-10-17',
-  username: '006548a4-ed3f-4bf0-9a38-71e8e0fc8acb',
-  password: 'zDzpHtFNpvUg',
-  url: 'https://gateway.watsonplatform.net/tone-analyzer/api'
+const tone_analyzer = new ToneAnalyzerV3({
+  username: process.env.TONE_ANALYZER_USERNAME,
+  password: process.env.TONE_ANALYZER_PASSWORD,
+  version_date: process.env.TONE_ANALYZER_VERSION_DATE
 });
 
 
-var text = 'Hi Team,The times are difficult! Our sales have been disappointing for the past three quarters for our data analytics product suite. However, we are not doing a good job at selling it, and this is really frustrating.';
-var params = {
-  'tone_input': {'text': text},
-  'content_type': 'application/json'
+var utterances = [
+    {
+      text: "Hello, I'm having a problem with your product.",
+      user: "customer"
+    },
+    {
+      text: "OK, let me know what's going on, please.",
+      user: "agent"
+    },
+    {
+      text: "Well, nothing is working :(",
+      user: "customer"
+    },
+    {
+      text: "Sorry to hear that.",
+      user: "agent"
+    }
+  ]
+
+
+var toneChatParams = {
+  utterances: utterances
 };
 
-toneAnalyzer.tone(params, function (error, response){
-  if (error)
-    console.log('error:', error);
-  else
-    console.log(JSON.stringify(response, null, 2));
+tone_analyzer.toneChat(toneChatParams, function (error, utteranceAnalyses) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(JSON.stringify(utteranceAnalyses, null, 2));
+  }
 });
-
 0;
